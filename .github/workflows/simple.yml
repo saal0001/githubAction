@@ -1,0 +1,12 @@
+name: shell commands
+on: [push]
+
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "hej med dig"
+      - name: multi line script
+        run: 

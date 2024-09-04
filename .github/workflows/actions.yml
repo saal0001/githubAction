@@ -1,0 +1,11 @@
+name: actions workflow
+on: [push]
+
+jobs:
+  run-github-action:
+    runs-on: ubuntu-laest
+    steps:
+      - name: simple js action
+        uses: actions-/hello-world-javascript-action@master
+        with:
+          who-to-greet: Riley freeman

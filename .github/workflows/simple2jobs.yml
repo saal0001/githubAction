@@ -1,0 +1,28 @@
+name: shell commands python
+on: [push]
+
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "hej med dig"
+      - name: multi line script
+        run: |
+         node -v
+         npm -v
+         mvn -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-mac-command:
+    runs-on: windows-latest
+    steps:
+      - name: directory powershell
+        run: get-location
+      - name: directory bash
+        run: pwd
+        shell: bash
